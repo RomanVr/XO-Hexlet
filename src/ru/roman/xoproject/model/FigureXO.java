@@ -1,6 +1,6 @@
 package ru.roman.xoproject.model;
 
-public enum Figure {
+public enum FigureXO {
 
 	X, O
 }
