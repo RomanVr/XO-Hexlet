@@ -21,9 +21,7 @@ public class Field<T> {
 		             throw new InvalidPointException();
 		}
 		return figures[point.getX()][point.getY()];
-	}
-	
-	
+	}	
 
 	public void setFigure(final Point point, final T figure) throws InvalidPointException {
 		if (!checkPoint(point)) {
