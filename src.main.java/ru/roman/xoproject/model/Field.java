@@ -8,11 +8,11 @@ public class Field<T> {
 	
 	private final T[][] figures;
 	
-	private final int size;
+	private final int FIELD_SIZE;
 
 	public Field(int size) {
 		super();
-		this.size = size;
+		this.FIELD_SIZE = size;
 		this.figures = (T[][])new Object[size][size];
 	}
 
@@ -26,11 +26,14 @@ public class Field<T> {
 	
 
 	public void setFigure(final Point point, final T figure) throws InvalidPointException {
+		if (!checkPoint(point)) {
+            throw new InvalidPointException();
+        }
 		figures[point.getX()][point.getY()] = figure;
 	}
 
 	public int getSize() {
-		return size;
+		return FIELD_SIZE;
 	}
 	
 	private boolean checkPoint(Point point) {
