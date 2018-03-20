@@ -4,8 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import sun.net.www.content.text.plain;
-
 public class PlayerTest {
 
 	@Test
