@@ -22,9 +22,16 @@ public class FieldTest {
 		final FigureXO inputFigure = FigureXO.X;
 		
 		field.setFigure(inputPoint, inputFigure);
-		FigureXO actualFigure = field.getFigure(inputPoint);
+		final FigureXO actualFigure = field.getFigure(inputPoint);
 		
 		assertEquals(inputFigure, actualFigure);			
+	}
+	@Test
+	public void testGetFigureIsNotSet() throws InvalidPointException {
+		final Point inputPoint = new Point(0, 0);
+		final FigureXO actualFigure = field.getFigure(inputPoint);
+		
+		assertNull(actualFigure);
 	}
 
 	@Test

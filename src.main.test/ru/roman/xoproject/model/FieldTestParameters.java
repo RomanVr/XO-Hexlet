@@ -39,7 +39,6 @@ public class FieldTestParameters {
                 {0, 3},
                 {3, 3},
                 {-1, 5}
-                
         });
     }
 		
