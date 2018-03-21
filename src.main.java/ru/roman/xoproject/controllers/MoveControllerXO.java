@@ -8,8 +8,8 @@ import ru.roman.xoproject.model.exceptions.OccupiedPlaceException;
 
 public class MoveControllerXO {
 	
-	public <T>void applayFigure(final Field<T> field, 
-								final T figure, 
+	public void applayFigure(final Field<FigureXO> field, 
+								final FigureXO figure, 
 								final Point point) throws OccupiedPlaceException, 
 														  InvalidPointException {
 		if(field.getFigure(point) != null) throw new OccupiedPlaceException();
