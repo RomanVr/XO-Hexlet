@@ -37,8 +37,9 @@ public class ConsoleViewXO {
 	public boolean move(final Game<FigureXO> game) {
 		final Field<FigureXO> field = game.getField();
 		final FigureXO winner = winnerControllerXO.getWinner(field);
-		if(winner != null) {			
-			System.out.format("Winner is: %s\n", winner);
+		if(winner != null) {	
+			
+			System.out.format("Winner is: %s\n", game.getNameToFigure(winner));
 			return false;
 		}
 		final FigureXO currentFigure = currentMoveControllerXO.currentMove(field);

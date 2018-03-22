@@ -1,7 +1,5 @@
 package ru.roman.xoproject.model;
 
-import static org.hamcrest.CoreMatchers.nullValue;
-
 import java.util.LinkedList;
 
 public class Game<F> {
@@ -29,10 +27,13 @@ public class Game<F> {
 	
 	public String getNameToFigure(final FigureXO figureXO) {
 		//TODO получить имя игрока по фигуре
+		for (Player<F> player : players) {
+			if(player.getFigure() == figureXO) return player.getName();
+		}
 		return null;
 	}
 
-	public Field<F> getField() {
+	public Field<F> getField() {		
 		return field;
 	}
 	
