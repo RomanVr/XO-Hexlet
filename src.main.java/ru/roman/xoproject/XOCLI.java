@@ -23,8 +23,7 @@ public class XOCLI {
 		
 		final ConsoleViewXO consoleViewXO = new ConsoleViewXO();
 		consoleViewXO.show(gameXO);	
-		while (consoleViewXO.move(gameXO)) {
-			System.console().flush();
+		while (consoleViewXO.move(gameXO)) {			
 			consoleViewXO.show(gameXO);			
 		}
 			
