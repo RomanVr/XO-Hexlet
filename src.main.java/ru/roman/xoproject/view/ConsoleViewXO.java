@@ -1,7 +1,5 @@
 package ru.roman.xoproject.view;
 
-import static org.junit.Assert.assertFalse;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -11,6 +9,7 @@ import ru.roman.xoproject.controllers.WinnerControllerXO;
 import ru.roman.xoproject.model.Field;
 import ru.roman.xoproject.model.FigureXO;
 import ru.roman.xoproject.model.Game;
+import ru.roman.xoproject.model.Player;
 import ru.roman.xoproject.model.Point;
 import ru.roman.xoproject.model.exceptions.InvalidPointException;
 import ru.roman.xoproject.model.exceptions.OccupiedPlaceException;
@@ -25,6 +24,11 @@ public class ConsoleViewXO {
 	
 	public void show(final Game<FigureXO> game) {
 		System.out.format("Game name: %s\n", game.getName());
+		
+		System.out.println("Players:");
+		for(Player<FigureXO> player: game) {
+			System.out.format("Player name: %s figure: %s\n", player.getName(), player.getFigure());
+		}
 		final Field<FigureXO> field = game.getField();
 		for (int x = 0; x < field.getSize(); x++) {
 			if(x != 0)

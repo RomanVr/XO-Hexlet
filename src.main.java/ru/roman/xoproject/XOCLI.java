@@ -1,6 +1,8 @@
 package ru.roman.xoproject;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.List;
+
 import ru.roman.xoproject.model.Field;
 import ru.roman.xoproject.model.FigureXO;
 import ru.roman.xoproject.model.Game;
@@ -15,7 +17,7 @@ public class XOCLI {
 		final Player<FigureXO> player1 = new Player<FigureXO>(name1, FigureXO.X);
 		final Player<FigureXO> player2 = new Player<FigureXO>(name2, FigureXO.O);
 		
-		final LinkedList<Player<FigureXO>> players = new LinkedList<>();
+		final List<Player<FigureXO>> players = new ArrayList<>();
 		players.add(player1);
 		players.add(player2);
 		
